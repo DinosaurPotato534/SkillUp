@@ -1,16 +1,14 @@
 import "../Styles/Mentors.css";
 import MentorsComponent from "../Components/Mentors/FindMentorsComponent";
 import AcceptMentors from "../Components/Mentors/AcceptMentors";
-import * as React from 'react';
+import * as React from "react";
 
 function Mentors() {
   return (
     <div className="container">
-      {/* <MentorsComponent /> */}
-      <AcceptMentors/>
+      <MentorsComponent />
     </div>
   );
 }
 
 export default Mentors;
-
