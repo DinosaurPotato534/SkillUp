@@ -6,18 +6,16 @@ import '../assets/styles/style.css'
 
 
 
-export default function SignUp() {
+export default function SignIn() {
 
     const initialValues = {
-        name: '',
         email: '',
         password: '',
-        role: '',
     }
 
   return (
     <div className='form__contanier'>
-        <h1 className='form__head--text'>Create an Account</h1>
+        <h1 className='form__head--text'>Welcome Back</h1>
         <Formik
             initialValues={initialValues}
             validationSchema={ValidationSchema}
@@ -27,11 +25,6 @@ export default function SignUp() {
         >
             <Form>
                 <div className='field'>
-                    <Field name='name' type='text' placeholder="Name" className="form__field"/>
-                    <ErrorMessage name='name' component="p" className='error'/>
-                </div>
-
-                <div className='field'>
                     <Field name='email' type='email' placeholder="Email" className="form__field"/>
                     <ErrorMessage name='email' component="p" className='error'/>
                 </div>
@@ -40,22 +33,12 @@ export default function SignUp() {
                     <Field name='password' type='password' placeholder="Password" className="form__field"/>
                     <ErrorMessage name='password' component="p" className='error'/>
                 </div>
-
-                <div className='field'>
-                    <Field name='role' as='select' className="form__field">
-                        <option value=''>Role</option>
-                        <option value='mentee'>Mentee</option>
-                        <option value='mentor'>Mentor</option>
-                    </Field>
-                    <ErrorMessage name='role' component="p" className='error'/>
-                </div>
-
-                <button type='submit' id= "btn__cta" className='form__field'>Sign Up</button>
+                <button type='submit' id= "btn__cta" className='form__field'>Log In</button>
                 <div><p>or continue with </p></div>
                 <div className='field'>
                     <a href="#"><button className='oauth-btn form__field' type='button '><img src={google} className='oauth-svg'></img></button></a>
                 </div>
-                <p>Already have an account? <a href="#">Sign In</a></p>
+                <p>Don't have an account? <a href="#">Sign Up</a></p>
             </Form>
         </Formik>
 

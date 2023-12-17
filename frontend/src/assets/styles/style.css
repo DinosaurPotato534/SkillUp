@@ -11,7 +11,7 @@
 
 
 :root {
-    --form__border-radius: 0.5rem;
+    --form__border-radius: 0.3rem;
     --form__border :1px solid #E0E0E0;
     --form__border-focus: 1px solid #2196F3;
     --mobile_header--font-size: 1.5rem;
@@ -29,4 +29,72 @@ img {
 
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+a:hover {
+cursor: pointer;  
+}
+
+a {
+  text-decoration: none;
+}
+
+.form__head--text {
+  font-size: var(--mobile_header--font-size);
+}
+
+
+
+
+
+
+
+
+.form__contanier {
+  width: 80%;
+  max-width: 500px;
+  margin: 5em auto;
+  padding: 2rem 0;
+  box-shadow: 4px 4px 6px 0px rgba(107, 101, 101, 0.06);
+}
+.field {
+  margin-bottom: 1rem;
+
+}
+
+#btn__cta {
+  background: var(--accent, #381DD9);
+  color: #dedede;
+  margin-bottom: 1.2em;
+  
+}
+
+.form__field {
+  border-radius: var(--form__border-radius);
+  border: var(--form__border);
+  font-size: 1rem;
+  padding: 0.5rem 0.2rem;
+  width: 70%;
+  line-height: 1.5;
+  background: var(--white, #FFF);
+
+}
+
+.oauth-svg {
+  width: 5.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.oauth-btn {
+  border-radius: var(--form__border-radius);
+  border: 1px solid #735DFA;
+  
+}
+
+.error {
+  color: rgb(247, 88, 36);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
