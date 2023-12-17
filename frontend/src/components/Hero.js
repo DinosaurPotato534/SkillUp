@@ -14,7 +14,7 @@ export default function Hero() {
                 <nav className='nav'>
                     <ul className="nav__links">
                         <li className='logo'><a href="#">SkillUp</a></li>
-                        <li className='nav__right'><a href="#"><button id="" className='secondary-cta'>LogIn</button></a></li>
+                        <li className='nav__right'><a href="#"><button id="" className='secondary-cta'>Log In</button></a></li>
                         <li><a href="#"><button id="btn__cta">Sign Up</button></a></li>
 
                          
@@ -23,8 +23,8 @@ export default function Hero() {
             </header>
             <main className="hero">
                 <section className="hero__text">
-                    <h1 id='hero--heading_text'>Find the right mentor for you</h1>
-                    <p id='hero--normal_text'>Get the help you need to achieve your goals</p>
+                    <h1 id='hero--heading_text'>Welcome to your one-stop for all things <br />mentoring</h1>
+                    <p id='hero--normal_text'>Get one-on-one mentorship from  world class engineers and developers</p>
                     <button id="btn__cta">Find A Mentor</button>
                 </section>
                 <div className='hero_sub--section row'>
@@ -46,9 +46,7 @@ export default function Hero() {
                     <a id="socials" href="#"><img src={twitter} className='socials__svg'></img></a>
                 </div>
                 <div className="footer__text">
-                    <p>© 2020 SkillUp</p>
-                    <p>Terms of Service</p>
-                    <p>Privacy Policy</p>
+                    <p>© 2023 SkillUp</p>
                 </div>
             </footer>
         </div>

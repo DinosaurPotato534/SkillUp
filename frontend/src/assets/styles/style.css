@@ -57,6 +57,7 @@ a {
 
   font-size: var(--mobile_normal--font-size);
   color: #8C8C90;
+  margin-top: 10px;
 }
 
 
@@ -80,7 +81,7 @@ a {
   background: var(--accent, #381DD9);
   color: #dedede;
   margin-bottom: 1.2em;
-  
+  border-radius: 8px; 
 }
 
 #btn__cta:hover {
@@ -121,7 +122,7 @@ a {
 
 .footer {
   margin-top: 1em;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .socials__svg {
   width: 1.5rem;
@@ -214,5 +215,16 @@ a {
   }
   .hero_sub--list {
     width: 45%;
+  }
+  .footer {
+    margin-top: 10vh;
+  }
+  #hero--heading_text {
+    font-size: 6vh;
+    font-weight: 700;
+    margin-top: 10vh;
+  }
+  #hero--normal_text {
+    font-size: 2vh; 
   }
 }
