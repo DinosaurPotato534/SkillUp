@@ -1,14 +1,15 @@
-const express = require('express');
-const mongooseConnection = require('./db');
-const userRoutes = require('./routes');
-const cors = require('cors');
+const express = require("express");
+const connectToMongoDB = require("./db");
+const apiRouter = require("./routes");
+const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
+connectToMongoDB();
 
 app.use(cors());
-
 app.use(express.json());
-app.use('/api', userRoutes);
+app.use("/api", apiRouter);
 
 const PORT = process.env.PORT || 5000;
 
