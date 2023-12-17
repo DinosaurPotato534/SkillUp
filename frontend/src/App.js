@@ -1,13 +1,13 @@
 import './App.css';
 import MentorsPage from './Pages/MentorsPage.tsx';
-import SignUp from './components/SignUp';
-import SignIn from './components/SignIn';
-import Hero from './components/Hero';
+import SignUp from './Components/SignUp';
+import SignIn from './Components/SignIn';
+import Hero from './Components/Hero';
 
 function App() {
   return (
     <div className="App">
-      <SignUp />      
+      <MentorsPage />   
     </div>
   );
 }
