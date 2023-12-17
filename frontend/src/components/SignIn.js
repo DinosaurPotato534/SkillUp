@@ -3,6 +3,8 @@ import ValidationSchema from '../schema';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import google from '../assets/images/google.svg';
 import '../assets/styles/style.css'
+import { Link } from "react-router-dom";
+import axios from 'axios';
 
 
 
@@ -12,6 +14,17 @@ export default function SignIn() {
         email: '',
         password: '',
     }
+
+    const handleSubmit = async (values) => {
+        try {
+          const response = await axios.post('http://localhost:5000/api/signin', values);
+          
+          console.log('User registered:', response.data);
+        } catch (error) {
+          console.error('Failed to register user:', error);
+        }
+      };
+    
 
   return (
     <div className='form__contanier'>
@@ -38,7 +51,7 @@ export default function SignIn() {
                 <div className='field'>
                     <a href="#"><button className='oauth-btn form__field' type='button '><img src={google} className='oauth-svg'></img></button></a>
                 </div>
-                <p>Don't have an account? <a href="#">Sign Up</a></p>
+                <p>Don't have an account? <Link to="/signUp">Sign Up</Link></p>
             </Form>
         </Formik>
 

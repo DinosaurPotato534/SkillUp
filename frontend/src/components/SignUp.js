@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import google from '../assets/images/google.svg';
 import '../assets/styles/style.css';
+import { Link } from "react-router-dom";
 
 const ValidationSchema = Yup.object({
   name: Yup.string().max(50, 'Must be 50 characters or less').required('Required'),
@@ -23,6 +24,7 @@ export default function SignUp() {
   const handleSubmit = async (values) => {
     try {
       const response = await axios.post('http://localhost:5000/api/signup', values);
+      
       console.log('User registered:', response.data);
     } catch (error) {
       console.error('Failed to register user:', error);
@@ -72,7 +74,7 @@ export default function SignUp() {
             </a>
           </div>
           <p>
-            Already have an account? <a href='#'>Sign In</a>
+            Already have an account? <Link to="/signIn">Login In</Link>
           </p>
         </Form>
       </Formik>
