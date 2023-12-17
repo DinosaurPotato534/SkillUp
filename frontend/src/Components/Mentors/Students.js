@@ -1,7 +1,7 @@
 import * as React from "react";
 import "../../Styles/Mentors.css";
 
-function MentorsComponent() {
+function Students() {
   const [isToggled, setIsToggled] = React.useState(false);
 
   const handleToggle = () => {
@@ -9,15 +9,15 @@ function MentorsComponent() {
   };
 
   return (
-    <>
+    <div className="container">
       <div className="header">
         <div className="toggleContainer">
           <div
             className={`toggleBackground ${isToggled ? "toggled" : ""}`}
             onClick={handleToggle}
           >
-            <span className="leftText">Mentors</span>
-            <span className="rightText">Find Mentors</span>
+            <span className="leftText">Students</span>
+            <span className="rightText">Student Requests</span>
             <div className="toggleAccentContainer">
               <div className={`toggleAccent ${isToggled ? "toggled" : ""}`} />
             </div>
@@ -35,8 +35,10 @@ function MentorsComponent() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
-        <div className="mentorButtonContainer">
-          <button className="mentorButton">Request Mentoring</button>
+        <div className="mentorButtonContainer row-btn">
+        <button className="btn-collection col-btn">Schedule Meeting</button>
+          <button className="btn-collection col-btn danger">Remove Student</button>
+
       </div>
     </div>
     <div className="mentorsContainer">
@@ -49,9 +51,11 @@ function MentorsComponent() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
-        <div className="mentorButtonContainer">
-          <button className="mentorButton">Request Mentoring</button>
-      </div>
+        <div className="mentorButtonContainer row-btn">
+          <button className="btn-collection col-btn">Schedule Meeting</button>
+            <button className="btn-collection col-btn danger">Remove Student</button>
+
+        </div>
     </div>
     <div className="mentorsContainer">
           <div className="mentorInfo">
@@ -63,14 +67,17 @@ function MentorsComponent() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
-        <div className="mentorButtonContainer">
-          <button className="mentorButton">Request Mentoring</button>
-      </div>
+        <div className="mentorButtonContainer row-btn">
+          {/* <button className="btn-collection col-btn">Request Mentor</button> */}
+          <button className="btn-collection col-btn">Schedule Meeting</button>
+          <button className="btn-collection col-btn danger">Remove Student</button>
+
+        </div>
     </div>
 
-    </>
+    </div>
   
   );
 }
 
-export default MentorsComponent;
+export default Students;

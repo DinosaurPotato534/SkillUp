@@ -1,15 +1,16 @@
 import * as React from "react";
 import "../../Styles/Mentors.css";
 
-function AcceptMentors() {
+function MentorsComponent() {
   const [isToggled, setIsToggled] = React.useState(false);
 
   const handleToggle = () => {
     setIsToggled((prev) => !prev);
+    
   };
 
   return (
-    <>
+    <div className="container">
       <div className="header">
         <div className="toggleContainer">
           <div
@@ -35,10 +36,8 @@ function AcceptMentors() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
-        <div className="mentorButtonContainer row-btn">
-        <button className="btn-collection warning col-btn">Cancel Meeting</button>
-          <button className="btn-collection danger col-btn">Remove Mentor</button>
-
+        <div className="mentorButtonContainer">
+          <button className="mentorButton">Request Mentoring</button>
       </div>
     </div>
     <div className="mentorsContainer">
@@ -51,10 +50,8 @@ function AcceptMentors() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
-        <div className="mentorButtonContainer row-btn">
-          <button className="btn-collection warning col-btn">Cancel Meeting</button>
-            <button className="btn-collection danger col-btn">Remove Mentor</button>
-
+        <div className="mentorButtonContainer">
+          <button className="mentorButton">Request Mentoring</button>
       </div>
     </div>
     <div className="mentorsContainer">
@@ -67,18 +64,14 @@ function AcceptMentors() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
-        <div className="mentorButtonContainer row-btn">
-          {/* <button className="btn-collection col-btn">Request Mentor</button> */}
-          <button className="btn-collection warning col-btn">Cancel Meeting</button>
-          <button className="btn-collection danger col-btn">Remove Mentor</button>
-
-
+        <div className="mentorButtonContainer">
+          <button className="mentorButton">Request Mentoring</button>
       </div>
     </div>
 
-    </>
+    </div>
   
   );
 }
 
-export default AcceptMentors;
+export default MentorsComponent;
