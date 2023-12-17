@@ -17,10 +17,13 @@
     --mobile_header--font-size: 1.5rem;
     --mobile_header--font-weight: 600;
     --mobile_header--line-height: 1.5;
-    --mobile_normal--font-size: 1.5rem;
+    --mobile_normal--font-size: 1rem;
 
 
+}
 
+li {
+  list-style: none;
 }
 
 img {
@@ -43,7 +46,18 @@ a {
   font-size: var(--mobile_header--font-size);
 }
 
+#hero--heading_text {
+  --mobile_header--font-size: 2rem;
+  font-size: var(--mobile_header--font-size);
+  font-weight: var(--mobile_header--font-weight);
+  line-height: var(--mobile_header--line-height);
+}
 
+#hero--normal_text {
+
+  font-size: var(--mobile_normal--font-size);
+  color: #8C8C90;
+}
 
 
 
@@ -67,6 +81,12 @@ a {
   color: #dedede;
   margin-bottom: 1.2em;
   
+}
+
+#btn__cta:hover {
+  background: var(--accent-hover, #391dd9d3);
+  color: #dedede;
+  cursor: pointer;
 }
 
 .form__field {
@@ -97,4 +117,102 @@ a {
   font-size: 0.8rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.footer {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+.socials__svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+#socials {
+  margin-left: 1.1em;
+}
+
+.footer__socials {
+  margin-bottom: 1em;
+
+}
+
+.hero_sub--section {
+  margin-bottom: 3em;
+  margin-top: 1em;
+}
+
+.hero_sub--section-image {
+  width: 18rem;
+  margin: 2em auto;
+}
+
+
+.nav__links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.nav__links  button {
+  padding: 0.5rem 0.8rem;
+  border: var(--form__border);
+  border-radius: var(--form__border-radius);
+}
+
+.secondary-cta {
+  border-radius: var(--form__border-radius);
+  border: 1px solid #381DD9;
+  background: transparent;
+  color: #381DD9;
+  margin-bottom: 1.2em;
+
+  }
+
+.logo {
+  color: var(--accent, #050217);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+
+.nav__right {
+  margin-left: auto;
+  margin-right: 1.3em;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero__text > button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border: var(--form__border);
+  border-radius: var(--form__border-radius);
+}
+
+
+
+@media screen and ( min-width: 760px) {
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero_sub--section-image {
+    width: 45%;
+    margin: 2em auto;
+  }
+  .hero_sub--list {
+    width: 45%;
+  }
 }
