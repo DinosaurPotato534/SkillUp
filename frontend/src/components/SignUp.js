@@ -1,6 +1,7 @@
 import React from 'react'
 import ValidationSchema from '../schema';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import google from '../assets/images/google.svg';
 
 
 
@@ -25,17 +26,17 @@ export default function SignUp() {
         >
             <Form>
                 <div className="form__field">
-                    <Field name='name' type='text' placeholder="Name"/>
+                    <Field name='name' type='text' placeholder="Name" className="form__field"/>
                     <ErrorMessage name='name' component="p" />
                 </div>
 
                 <div className="form__field">
-                    <Field name='email' type='email' placeholder="Email"/>
+                    <Field name='email' type='email' placeholder="Email" className="form__field"/>
                     <ErrorMessage name='email' component="p"/>
                 </div>
 
                 <div className="form__field">
-                    <Field name='password' type='password' placeholder="Password"/>
+                    <Field name='password' type='password' placeholder="Password" className="form__field"/>
                     <ErrorMessage name='password' component="p"/>
                 </div>
 
@@ -51,8 +52,7 @@ export default function SignUp() {
                 <button type='submit'>Sign Up</button>
                 <div><p>or continue with </p></div>
                 <div className="form__field">
-                    <button type='button'><img></img></button>
-                    <button type='button'>Facebook</button>
+                    <a href="#"><button className='oauth-btn' type='button'><img src={google}></img></button></a>
                 </div>
                 <p>Already have an account? <a href="#">Sign In</a></p>
             </Form>
