@@ -1,18 +1,100 @@
 .container {
-    min-height: 100vh;
-    max-height: 100vh;
-    min-width: 100vw;
-    max-width: 100vw;
-}
-
-.toggleContainer {
-    display: inline-flex;
-    padding: 8px;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-.toggleBackground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  .toggleContainer {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .toggleBackground {
+    position: relative;
+    background: var(--gray-50, #f4f4f4);
+    width: 35vh;
+    height: 8vh;
     border-radius: 221px;
-    background: var(--gray-50, #F4F4F4);
-}
+    display: flex;
+    align-items: center;
+    padding: 0 1vh;
+    overflow: hidden;
+  }
+  
+  .leftText,
+  .rightText {
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-size: 1.5vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: black;
+    transition: color 0.3s ease;
+    z-index: 2;
+  }
+  
+  .leftText {
+    left: 0;
+  }
+  
+  .rightText {
+    right: 0;
+  }
+  
+  .toggleAccentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  .toggleAccent {
+    position: relative;
+    background: var(--accent, #381dd9);
+    width: 17vh;
+    height: 6vh;
+    border-radius: 221px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+  }
+  
+  
+  .toggleAccent.toggled {
+    transform: translateX(-105%);
+  }
+  
+  .toggleBackground.toggled .leftText,
+  .toggleBackground:not(.toggled) .rightText {
+    color: white;
+  }
+  
+  .toggleBackground.toggled .rightText,
+  .toggleBackground:not(.toggled) .leftText {
+    color: black;
+  }
+  
+  .profileImage {
+    position: absolute;
+    top: 2vh;
+    right: 1vw;
+    width: 2.6vw;
+    height: auto;
+    z-index: 3;
+  }
