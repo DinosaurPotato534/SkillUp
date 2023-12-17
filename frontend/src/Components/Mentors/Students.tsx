@@ -55,7 +55,7 @@ function Students() {
           <button className="btn-collection col-btn">Schedule Meeting</button>
             <button className="btn-collection col-btn danger">Remove Student</button>
 
-      </div>
+        </div>
     </div>
     <div className="mentorsContainer">
           <div className="mentorInfo">
@@ -72,8 +72,7 @@ function Students() {
           <button className="btn-collection col-btn">Schedule Meeting</button>
           <button className="btn-collection col-btn danger">Remove Student</button>
 
-
-      </div>
+        </div>
     </div>
 
     </>

@@ -4,6 +4,9 @@ import AcceptMentors from "../Components/Mentors/AcceptMentors";
 import * as React from 'react';
 import AcceptStudents from "../Components/Mentors/AcceptStudents";
 import Students from "../Components/Mentors/Students";
+import MeetingPrompt from "../Components/Mentors/MeetingPrompt";
+import Header from "../Components/Mentors/Header";
+
 
 function Mentors() {
   return (
@@ -11,7 +14,9 @@ function Mentors() {
       {/* <MentorsComponent /> */}
       {/* <AcceptMentors/> */}
       {/* <AcceptStudents/> */}
-      <Students />
+      {/* <Students /> */}
+      <Header />
+      <MeetingPrompt />
     </div>
   );
 }
