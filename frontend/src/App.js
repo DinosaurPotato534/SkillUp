@@ -1,3 +1,4 @@
+import './App.css';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import Hero from './components/Hero';
@@ -18,13 +19,7 @@ function App() {
       <Route path="/" element={ <Hero/> } />
       <Route path="/signIn" element={ <SignIn/> } />
       <Route path="/signUp" element={ <SignUp/> } />
-      <Route path="/mentors" element={<FindMentorsComponent />} />
-      <Route path="/acceptMentors" element={<AcceptMentors />} />
-      <Route path="/acceptStudents" element={<AcceptStudents />} />
-      <Route path="/students" element={<Students />} />
-      <Route path="/header" element={<Header />} />
-      <Route path="/meetingPrompt" element={<MeetingPrompt />} />
-
+      <MentorsPage />
     </Routes>
     </div>
   );
