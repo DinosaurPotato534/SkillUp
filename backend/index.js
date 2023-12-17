@@ -4,7 +4,7 @@ const apiRouter = require("./routes");
 const cors = require("cors");
 const morgan = require("morgan");
 const errorHandler = require("./middleware/errorHandler");
-require("dotenv").config();
+const envVars = require("./config");
 
 const app = express();
 connectToMongoDB();
@@ -14,7 +14,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use("/api", apiRouter);
 app.use(errorHandler);
-const PORT = process.env.PORT || 5000;
+const PORT = envVars.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

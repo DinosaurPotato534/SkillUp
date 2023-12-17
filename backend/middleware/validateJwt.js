@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 const TokenBlacklist = require("../models/tokens");
+const envVars = require("../config");
 
 const authenticateToken = async (req, res, next) => {
   try {
@@ -15,7 +16,7 @@ const authenticateToken = async (req, res, next) => {
     }
 
     // Verify the token
-    const decodedToken = jwt.verify(token, "4e5245907dfeca9f0763");
+    const decodedToken = jwt.verify(token, envVars.JWT_SECRET);
 
     // Check if the token is blacklisted
     const blackListed = await isTokenBlacklisted(token);

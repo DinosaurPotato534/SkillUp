@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 const TokenBlacklist = require("../models/tokens");
+const envVars = require("../config");
 
 const signUp = async (req, res) => {
   try {
@@ -61,7 +62,7 @@ const signIn = async (req, res) => {
     // Generate a JWT token
     const token = jwt.sign(
       { userInfo: { userId: existingUser.uid, role: existingUser.role } },
-      "4e5245907dfeca9f0763",
+      envVars.JWT_SECRET,
       {
         expiresIn: "24h", // Token expiration time
       }
