@@ -23,7 +23,7 @@ export default function SignUp() {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/signup', values);
+      const response = await axios.post('http://localhost:5000/auth/signup', values);
       
       console.log('User registered:', response.data);
     } catch (error) {
