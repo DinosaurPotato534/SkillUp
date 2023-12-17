@@ -4,6 +4,7 @@ import instagram from '../assets/images/icon _Instagram.svg';
 import github from '../assets/images/icon _GitHub.svg';
 import mentor from '../assets/images/video_session.png';
 import '../assets/styles/style.css';
+import { Link } from 'react-router-dom';
 
 
 export default function Hero() {
@@ -13,11 +14,19 @@ export default function Hero() {
             <header className="header">
                 <nav className='nav'>
                     <ul className="nav__links">
-                        <li className='logo'><a href="#">SkillUp</a></li>
-                        <li className='nav__right'><a href="#"><button id="" className='secondary-cta'>Log In</button></a></li>
-                        <li><a href="#"><button id="btn__cta">Sign Up</button></a></li>
-
-                         
+                        <li className='logo'>
+                            <a href="#">SkillUp</a>
+                        </li>
+                        <li className='nav__right'>
+                            <Link to="/signIn">
+                                <button id="" className='secondary-cta'>Log In</button>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/signUp">
+                                <button id="btn__cta">Sign Up</button>
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
             </header>
