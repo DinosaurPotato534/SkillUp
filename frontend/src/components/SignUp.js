@@ -15,7 +15,7 @@ export default function SignUp() {
 
   return (
     <div>
-        <h1>Create an Account</h1>
+        <h1 className='form__head--text'>Create an Account</h1>
         <Formik
             initialValues={initialValues}
             validationSchema={ValidationSchema}
@@ -49,6 +49,12 @@ export default function SignUp() {
                 </div>
 
                 <button type='submit'>Sign Up</button>
+                <div><p>or continue with </p></div>
+                <div className="form__field">
+                    <button type='button'><img></img></button>
+                    <button type='button'>Facebook</button>
+                </div>
+                <p>Already have an account? <a href="#">Sign In</a></p>
             </Form>
         </Formik>
 

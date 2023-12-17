@@ -1,0 +1,29 @@
+*::after, ::backdrop, ::before {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Path: frontend/src/assets/styles/style.css */
+/* font-family: 'Poppins', sans-serif; */
+
+
+:root {
+    --form__border-radius: 0.5rem;
+    --form__border :1px solid #E0E0E0;
+    --form__border-focus: 1px solid #2196F3;
+    --mobile_header--font-size: 1.5rem;
+    --mobile_header--font-weight: 600;
+    --mobile_header--line-height: 1.5;
+    --mobile_normal--font-size: 1.5rem;
+
+
+
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
