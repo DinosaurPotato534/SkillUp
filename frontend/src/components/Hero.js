@@ -34,7 +34,7 @@ export default function Hero() {
                 <section className="hero__text">
                     <h1 id='hero--heading_text'>Welcome to your one-stop for all things <br />mentoring</h1>
                     <p id='hero--normal_text'>Get one-on-one mentorship from  world class engineers and developers</p>
-                    <button id="btn__cta">Find A Mentor</button>
+                    <button id="btn__cta"><Link to="/mentors">Find A Mentor</Link></button>
                 </section>
                 <div className='hero_sub--section row'>
                     <ul className='hero_sub--list'>

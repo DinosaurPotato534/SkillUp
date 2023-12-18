@@ -1,7 +1,7 @@
 import * as React from "react";
 import "../../Styles/Mentors.css";
 
-function Students() {
+function AcceptMentors() {
   const [isToggled, setIsToggled] = React.useState(false);
 
   const handleToggle = () => {
@@ -9,15 +9,15 @@ function Students() {
   };
 
   return (
-    <>
+    <div className="container">
       <div className="header">
         <div className="toggleContainer">
           <div
             className={`toggleBackground ${isToggled ? "toggled" : ""}`}
             onClick={handleToggle}
           >
-            <span className="leftText">Students</span>
-            <span className="rightText">Student Requests</span>
+            <span className="leftText">Mentors</span>
+            <span className="rightText">Find Mentors</span>
             <div className="toggleAccentContainer">
               <div className={`toggleAccent ${isToggled ? "toggled" : ""}`} />
             </div>
@@ -36,8 +36,8 @@ function Students() {
             </p>
           </div>
         <div className="mentorButtonContainer row-btn">
-        <button className="btn-collection col-btn">Schedule Meeting</button>
-          <button className="btn-collection col-btn danger">Remove Student</button>
+        <button className="btn-collection warning col-btn">Cancel Meeting</button>
+          <button className="btn-collection danger col-btn">Remove Mentor</button>
 
       </div>
     </div>
@@ -52,10 +52,10 @@ function Students() {
             </p>
           </div>
         <div className="mentorButtonContainer row-btn">
-          <button className="btn-collection col-btn">Schedule Meeting</button>
-            <button className="btn-collection col-btn danger">Remove Student</button>
+          <button className="btn-collection warning col-btn">Cancel Meeting</button>
+            <button className="btn-collection danger col-btn">Remove Mentor</button>
 
-        </div>
+      </div>
     </div>
     <div className="mentorsContainer">
           <div className="mentorInfo">
@@ -69,15 +69,16 @@ function Students() {
           </div>
         <div className="mentorButtonContainer row-btn">
           {/* <button className="btn-collection col-btn">Request Mentor</button> */}
-          <button className="btn-collection col-btn">Schedule Meeting</button>
-          <button className="btn-collection col-btn danger">Remove Student</button>
+          <button className="btn-collection warning col-btn">Cancel Meeting</button>
+          <button className="btn-collection danger col-btn">Remove Mentor</button>
 
-        </div>
+
+      </div>
     </div>
 
-    </>
+    </div>
   
   );
 }
 
-export default Students;
+export default AcceptMentors;
